@@ -1,188 +1,62 @@
-# Gitcheatsheet
-Git & GitHub Cheat Sheet
-1. Configure Git (First Time)
-git config --global user.name "Ayush Kumar Gupta"
-git config --global user.email "your_email@example.com"
-
-Check configuration:
-
-git config --list
-2. Create a New Repository
-
-Initialize Git:
-
-git init
-
-Check status:
-
-git status
-3. Add & Commit Changes
-
-Add specific file:
-
-git add filename
-
-Add all files:
-
-git add .
-
-Commit changes:
-
-git commit -m "Initial commit"
-
-Commit tracked files directly:
-
-git commit -am "Updated project"
-4. Connect to GitHub
-
-Add remote repository:
-
-git remote add origin https://github.com/username/repository.git
-
-Check remote:
-
-git remote -v
-5. Push Code to GitHub
-
-First push:
-
-git push -u origin main
-
-or
-
-git push -u origin master
-
-After making changes:
-
-git add .
-git commit -m "Updated project"
-git push
-6. Clone Existing Repository
-git clone https://github.com/username/repository.git
-7. Pull Latest Changes
-git pull origin main
-
-or simply:
-
-git pull
-8. Branch Commands
-
-Create branch:
-
-git branch feature
-
-Switch branch:
-
-git checkout feature
-
-Create & switch:
-
-git checkout -b feature
-
-Modern command:
-
-git switch -c feature
-
-List branches:
-
-git branch
-
-Delete branch:
-
-git branch -d feature
-9. Merge Branches
-
-Switch to main:
-
-git checkout main
-
-Merge feature branch:
-
-git merge feature
-10. View History
-git log
-
-Compact view:
-
-git log --oneline
-
-Graph view:
-
-git log --oneline --graph --all
-11. Undo Changes
-
-Discard file changes:
-
-git restore filename
-
-Discard all changes:
-
-git restore .
-
-Unstage file:
-
-git restore --staged filename
-
-Remove last commit (keep files):
-
-git reset --soft HEAD~1
-
-Remove last commit completely:
-
-git reset --hard HEAD~1
-12. Stash Changes
-
-Save work temporarily:
-
-git stash
-
-View stashes:
-
-git stash list
-
-Restore stash:
-
-git stash pop
-13. Common Daily Workflow
-git status
-git add .
-git commit -m "Added new feature"
-git push
-
-Get latest code:
-
-git pull
-14. GitHub Authentication (PAT)
-
-If password authentication fails:
-
-Go to GitHub → Settings → Developer Settings → Personal Access Tokens.
-Generate a token.
-Use:
-Username: your_github_username
-Password: Personal Access Token
-15. Most Important Commands for Interviews
-git init
-git clone
-git status
-git add .
-git commit -m "message"
-git push
-git pull
-git branch
-git checkout
-git merge
-git rebase
-git stash
-git log --oneline
-git reset
-git revert
-Emergency Commands
-git status
-git add .
-git commit -m "fix"
-git push
-After Editing Code
-git add .
-git commit -m "Updated project"
-git push
+## Gitcheatsheet
+# Git Fundamentals & Configuration
+# Initial Setup & Global Configuration
+```sh
+   # Essential global configuration
+git config --global user.name "Your Full Name"
+git config --global user.email "your.email@example.com"
+git config --global init.defaultBranch main
+
+# Editor configuration
+git config --global core.editor "code --wait"     # VS Code
+git config --global core.editor "vim"             # Vim
+git config --global core.editor "nano"            # Nano
+git config --global core.editor "subl -n -w"     # Sublime Text
+
+# Line ending configuration
+git config --global core.autocrlf true           # Windows
+git config --global core.autocrlf input          # macOS/Linux
+git config --global core.autocrlf false          # Manual control
+
+# Advanced configuration options
+git config --global color.ui auto                # Colored output
+git config --global core.filemode false          # Ignore file mode changes
+git config --global core.ignorecase false        # Case sensitive file names
+git config --global pull.rebase false            # Merge on pull (default)
+git config --global push.default simple          # Push behavior
+git config --global rerere.enabled true          # Remember conflict resolutions
+
+# Credential management
+git config --global credential.helper cache      # Linux/macOS
+git config --global credential.helper manager    # Windows
+git config --global credential.helper store      # Plain text (not recommended)
+
+# Advanced aliases for productivity
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.unstage 'reset HEAD --'
+git config --global alias.last 'log -1 HEAD'
+git config --global alias.visual '!gitk'
+git config --global alias.graph 'log --oneline --graph --decorate --all'
+git config --global alias.aliases 'config --get-regexp alias'
+
+# Complex aliases
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+git config --global alias.contributors "shortlog -sn"
+git config --global alias.amend "commit --amend --no-edit"
+git config --global alias.force "push --force-with-lease"
+git config --global alias.root "rev-parse --show-toplevel"
+
+# View configuration
+git config --list                                # All config
+git config --global --list                       # Global config only
+git config --local --list                        # Local repo config only
+git config --get user.name                       # Specific value
+git config --get-regexp alias                    # All aliases
+
+# Per-repository configuration
+git config user.name "Different Name"            # Override for this repo
+git config user.email "work@company.com"         # Work email for work repos
+   ```
