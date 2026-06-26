@@ -1136,8 +1136,8 @@ java -jar bfg.jar --delete-files secrets.txt my-repo.git
 ## Branching & Merging: Advanced branch management and conflict resolution
 ## Remote Management: Working with remotes, push/pull strategies, fork workflows
 ## Advanced Operations: Stashing, reset/revert, cherry-picking, patch management
-Tagging & Releases: Version management and release workflows
-GitHub Features: GitHub CLI mastery, Actions integration, collaboration
-Workflows: Git Flow, GitHub Flow, team collaboration patterns
-Configuration: Hooks, automation, performance optimization
-Security: GPG signing, SSH setup, protecting sensitive data
+## Tagging & Releases: Version management and release workflows
+## GitHub Features: GitHub CLI mastery, Actions integration, collaboration
+## Workflows: Git Flow, GitHub Flow, team collaboration patterns
+## Configuration: Hooks, automation, performance optimization
+## Security: GPG signing, SSH setup, protecting sensitive data
