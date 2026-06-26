@@ -1130,12 +1130,12 @@ git filter-branch --force --index-filter \
 # Alternative: using BFG Repo-Cleaner (recommended)
 java -jar bfg.jar --delete-files secrets.txt my-repo.git
    ```
-Key Areas Covered:-
-Git Fundamentals: Configuration, initialization, basic operations
-Core Operations: Staging, committing, viewing history with advanced options
-Branching & Merging: Advanced branch management and conflict resolution
-Remote Management: Working with remotes, push/pull strategies, fork workflows
-Advanced Operations: Stashing, reset/revert, cherry-picking, patch management
+## Key Areas Covered:-
+## Git Fundamentals: Configuration, initialization, basic operations
+## Core Operations: Staging, committing, viewing history with advanced options
+## Branching & Merging: Advanced branch management and conflict resolution
+## Remote Management: Working with remotes, push/pull strategies, fork workflows
+## Advanced Operations: Stashing, reset/revert, cherry-picking, patch management
 Tagging & Releases: Version management and release workflows
 GitHub Features: GitHub CLI mastery, Actions integration, collaboration
 Workflows: Git Flow, GitHub Flow, team collaboration patterns
