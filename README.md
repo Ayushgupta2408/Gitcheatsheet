@@ -1130,6 +1130,7 @@ git filter-branch --force --index-filter \
 # Alternative: using BFG Repo-Cleaner (recommended)
 java -jar bfg.jar --delete-files secrets.txt my-repo.git
    ```
+
 ## Key Areas Covered:-
 ## Git Fundamentals: Configuration, initialization, basic operations
 ## Core Operations: Staging, committing, viewing history with advanced options
