@@ -1131,7 +1131,7 @@ git filter-branch --force --index-filter \
 java -jar bfg.jar --delete-files secrets.txt my-repo.git
    ```
 
-## Key Areas Covered:-
+## Key Areas Covered in this cheatsheet :-
 ## Git Fundamentals: Configuration, initialization, basic operations
 ## Core Operations: Staging, committing, viewing history with advanced options
 ## Branching & Merging: Advanced branch management and conflict resolution
